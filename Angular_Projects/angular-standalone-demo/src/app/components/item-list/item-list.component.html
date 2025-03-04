@@ -1,0 +1,8 @@
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let item of items">
+    <strong>{{ item.name }}</strong> - ${{ item.price }}
+    <span *ngIf="item.available" style="color: green;">(Available)</span>
+    <span *ngIf="!item.available" style="color: red;">(Out of stock)</span>
+  </li>
+</ul>
