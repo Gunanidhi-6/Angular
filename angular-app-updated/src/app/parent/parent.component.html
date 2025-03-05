@@ -1,0 +1,18 @@
+<div>
+    <h1>Parent Component</h1>
+    <p>{{ parentMessage }}</p>
+  
+    <!-- Passing data to the child component -->
+    <app-child [childMessage]="parentMessage"></app-child>
+  </div>
+  
+  <div>
+    <h1>Parent Component</h1>
+    <p>{{ parentMessage }}</p>
+  
+    <!-- Passing data to the child component -->
+    <app-child [childMessage]="parentMessage" (sendMessage)="receiveMessage($event)"></app-child>
+  
+    <p>Message from Child: {{ receivedMessage }}</p>
+  </div>
+  
