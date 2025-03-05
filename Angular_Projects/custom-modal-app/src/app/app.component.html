@@ -1,0 +1,5 @@
+<button (click)="openModal()">Open Modal</button>
+
+<app-modal [title]="'Custom Modal'" [isVisible]="showModal" (closeModal)="closeModal()">
+  This is a reusable modal component.
+</app-modal>
