@@ -1,0 +1,78 @@
+<div *ngIf="showContent">
+  <h1>ngIf Example</h1>
+  Content goes here...
+</div>
+
+<div>
+  <h1>ngFor Example</h1>
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>
+
+<div>
+  <h1>ngClass Example</h1>
+  <button (click)="isActive = !isActive">Toggle Class</button>
+  <div [ngClass]="{'active-class': isActive, 'inactive-class': !isActive}">
+    This div's class changes dynamically.
+  </div>
+</div>
+
+<div>
+  <h1>Custom Directive Example</h1>
+  <p appHoverHighlight>Hover over this text to change its background color.</p>
+</div>
+
+<div>
+  <h1>Custom Auto Focus Directive</h1>
+  <input type="text" appAutoFocus placeholder="This input will be auto-focused">
+</div>
+
+<div>
+  <h1>Using DatePipe</h1>
+  <p>The current date is: {{ currentDate | date: 'fullDate' }}</p>
+  <p>Formatted date: {{ currentDate | date: 'shortDate' }}</p>
+</div>
+
+<div>
+  <h1>Using CurrencyPipe</h1>
+  <p>Price in USD: {{ price | currency:'USD':true:'1.2-2' }}</p>
+</div>
+
+<div>
+  <h1>Using UpperCasePipe and LowerCasePipe</h1>
+  <p>Original: {{ message }}</p>
+  <p>Uppercase: {{ message | uppercase }}</p>
+  <p>Lowercase: {{ message | lowercase }}</p>
+</div>
+
+<div>
+  <h1>Using Custom TitleCasePipe</h1>
+  <p>Original Text: {{ text }}</p>
+  <p>Title Case: {{ text | titleCase }}</p>
+</div>
+
+<div>
+  <h1>Chaining Pipes</h1>
+
+  <!-- Chaining UpperCasePipe and TitleCasePipe -->
+  <p>Chained Pipe Result: {{ message2 | lowercase | titleCase }}</p>
+
+  <!-- Chaining CurrencyPipe and DecimalPipe -->
+  <p>Chained Currency Pipe: {{ price2 | currency:'USD':true:'1.0-2' | uppercase }}</p>
+</div>
+
+<div>
+  <h1>Testing Angular Directive Lifecycle</h1>
+  
+  <div appLifecycleDirective>
+    <p>This is a div with a custom directive.</p>
+  </div>
+  
+  <button (click)="destroyDirective()">Destroy Directive</button>
+</div>
+
+
+
+
+
